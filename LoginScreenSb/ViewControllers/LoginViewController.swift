@@ -14,13 +14,35 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var textinputsenha: UITextField!
     @IBOutlet weak var buttonlogar: UIButton!
     @IBOutlet weak var buttoncancelar: UIButton!
+    @IBOutlet weak var lblerror: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        iniciarElementos()
         // Do any additional setup after loading the view.
     }
     
-
+    func iniciarElementos(){
+        lblerror.text = ""
+        textinputlogin.text = ""
+        textinputlogin.text = ""
+    }
+    
+    func validateFields() -> String? {
+        if textinputlogin.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+           textinputsenha.text?.trimmingCharacters(in: .newlines) == "" {
+            return "Preencha todos os campos"
+        }
+        
+        return nil
+    }
+    
+    @IBAction func logginTapped(_ sender: Any) {
+        let error = validateFields()
+        if error != nil {
+            lblerror.text = error!
+        }
+    }
+    
     @IBAction func actionGoBack(_ sender: Any) {
         let inicioViewController =  self.storyboard?.instantiateViewController(identifier: "initappscreen") as? ViewController
         self.view.window?.rootViewController = inicioViewController

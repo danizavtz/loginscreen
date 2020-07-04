@@ -63,7 +63,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="vhr-Bq-S24">
-                                <rect key="frame" x="40" y="640" width="334" height="182"/>
+                                <rect key="frame" x="40" y="601.5" width="334" height="220.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AMZ-aU-62B">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
@@ -75,12 +75,18 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Erro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccw-wP-rtY">
+                                        <rect key="frame" x="151.5" y="104" width="31.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jas-pr-XB6">
-                                        <rect key="frame" x="0.0" y="104" width="334" height="30"/>
+                                        <rect key="frame" x="0.0" y="142.5" width="334" height="30"/>
                                         <state key="normal" title="Logar"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roJ-PC-Kw0">
-                                        <rect key="frame" x="0.0" y="152" width="334" height="30"/>
+                                        <rect key="frame" x="0.0" y="190.5" width="334" height="30"/>
                                         <state key="normal" title="Cancelar"/>
                                         <connections>
                                             <action selector="actionGoBack:" destination="Kl7-ze-uGi" eventType="touchUpInside" id="6yH-kf-MqI"/>
@@ -111,6 +117,7 @@
                     <connections>
                         <outlet property="buttoncancelar" destination="roJ-PC-Kw0" id="Rdq-m4-BWH"/>
                         <outlet property="buttonlogar" destination="jas-pr-XB6" id="Ehk-jw-BmT"/>
+                        <outlet property="lblerror" destination="ccw-wP-rtY" id="wxx-mv-PdY"/>
                         <outlet property="textinputlogin" destination="AMZ-aU-62B" id="LHF-Zi-eTl"/>
                         <outlet property="textinputsenha" destination="QVP-NJ-mdj" id="B60-ri-LMu"/>
                     </connections>
