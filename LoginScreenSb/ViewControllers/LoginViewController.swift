@@ -25,7 +25,10 @@ class LoginViewController: UIViewController {
     func iniciarElementos(){
         lblerror.text = ""
         textinputlogin.text = ""
-        textinputlogin.text = ""
+        textinputlogin.autocorrectionType = .no
+        textinputsenha.text = ""
+        textinputsenha.autocorrectionType = .no
+        
     }
     
     func validateFields() -> String? {
@@ -68,6 +71,9 @@ class LoginViewController: UIViewController {
                         let tkn = try JSONDecoder().decode(AuthenticationToken.self, from: data)
                         let defaults = UserDefaults.standard
                         defaults.set(tkn.token, forKey: "token")
+                        DispatchQueue.main.async {
+                            self.acaoMudarDeTela()
+                        }
                         print ("\(tkn)")
                     } catch {
                         print("Unexpected error: \(error).")
@@ -75,7 +81,6 @@ class LoginViewController: UIViewController {
                 }
             }
             task.resume()
-            acaoMudarDeTela()
         }
     }
     
