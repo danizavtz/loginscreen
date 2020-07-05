@@ -163,7 +163,7 @@
         <!--Configurações-->
         <scene sceneID="WnK-YR-gWw">
             <objects>
-                <viewController id="i32-YY-Sjj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="configuracao" id="i32-YY-Sjj" customClass="ConfiguracaoViewController" customModule="LoginScreenSb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AvP-wj-qBi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
