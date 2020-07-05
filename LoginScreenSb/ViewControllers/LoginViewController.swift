@@ -60,8 +60,10 @@ class LoginViewController: UIViewController {
                 }
                 guard let response = response as? HTTPURLResponse,
                     (200...299).contains(response.statusCode) else {
-                    print ("Usuário ou senha incorretos")
-                    return
+                        DispatchQueue.main.async {
+                            self.lblerror.text = "Usuário ou senha incorretos"
+                        }
+                        return
                 }
                 if let mimeType = response.mimeType,
                     mimeType == "application/json",
