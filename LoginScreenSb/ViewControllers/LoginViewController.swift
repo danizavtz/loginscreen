@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var buttoncancelar: UIButton!
     @IBOutlet weak var lblerror: UILabel!
     let loginUrl:String =  "https://api.danizavtz.com.br/login"
+    let child = SpinnerViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         iniciarElementos()
@@ -53,6 +54,7 @@ class LoginViewController: UIViewController {
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpMethod = "POST"
             request.httpBody = encodedAccessData
+            inserirSpinnerView()
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 if let error = error {
                     print ("error: \(error)")
@@ -63,6 +65,7 @@ class LoginViewController: UIViewController {
                         DispatchQueue.main.async {
                             self.lblerror.text = "Usuário ou senha incorretos"
                         }
+                        self.removerSpinnerView()
                         return
                 }
                 if let mimeType = response.mimeType,
@@ -73,6 +76,7 @@ class LoginViewController: UIViewController {
                         let defaults = UserDefaults.standard
                         defaults.set(tkn.token, forKey: "token")
                         DispatchQueue.main.async {
+
                             self.acaoMudarDeTela()
                         }
                         print ("\(tkn)")
@@ -80,8 +84,10 @@ class LoginViewController: UIViewController {
                         print("Unexpected error: \(error).")
                     }
                 }
+                self.removerSpinnerView()
             }
             task.resume()
+            
         }
     }
     
@@ -96,5 +102,19 @@ class LoginViewController: UIViewController {
         self.view.window?.rootViewController = homeViewController
         self.view.window?.makeKeyAndVisible()
     }
-
+    
+    func inserirSpinnerView() {
+        addChild(child)
+        child.view.frame = view.frame
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+    }
+    
+    func removerSpinnerView() {
+           DispatchQueue.main.async {
+            self.child.willMove(toParent: nil)
+            self.child.view.removeFromSuperview()
+            self.child.removeFromParent()
+           }
+    }
 }
