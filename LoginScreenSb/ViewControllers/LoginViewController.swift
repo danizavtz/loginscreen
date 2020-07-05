@@ -65,10 +65,10 @@ class LoginViewController: UIViewController {
                     mimeType == "application/json",
                     let data = data {
                       do {
-                        let token = try JSONDecoder().decode(AuthenticationToken.self, from: data)
+                        let tkn = try JSONDecoder().decode(AuthenticationToken.self, from: data)
                         let defaults = UserDefaults.standard
-                        defaults.set(token, forKey: "token")
-                        print ("\(token)")
+                        defaults.set(tkn.token, forKey: "token")
+                        print ("\(tkn)")
                     } catch {
                         print("Unexpected error: \(error).")
                     }
