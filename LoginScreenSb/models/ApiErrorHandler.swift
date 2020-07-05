@@ -1,5 +1,5 @@
 //
-//  Credencial.swift
+//  ApiErrorHandler.swift
 //  LoginScreenSb
 //
 //  Created by Daniel Lucena Pires on 04/07/20.
@@ -7,8 +7,3 @@
 //
 
 import Foundation
-
-struct Credencial : Codable {
-    let login: String
-    let senha: String
-}
