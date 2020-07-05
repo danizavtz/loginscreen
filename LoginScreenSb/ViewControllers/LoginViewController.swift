@@ -40,6 +40,8 @@ class LoginViewController: UIViewController {
         let error = validateFields()
         if error != nil {
             lblerror.text = error!
+        } else {
+            
         }
     }
     

@@ -16,6 +16,7 @@
 		27DA60AB24A260590077AF6C /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA60AA24A260590077AF6C /* CadastroViewController.swift */; };
 		27DA60AD24A2606E0077AF6C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA60AC24A2606E0077AF6C /* LoginViewController.swift */; };
 		27DA60AF24A267050077AF6C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA60AE24A267050077AF6C /* HomeViewController.swift */; };
+		27EF4DB624B1508D00861493 /* Credencial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EF4DB524B1508D00861493 /* Credencial.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		27DA60AA24A260590077AF6C /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		27DA60AC24A2606E0077AF6C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		27DA60AE24A267050077AF6C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		27EF4DB524B1508D00861493 /* Credencial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credencial.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		27DA609524A25E780077AF6C /* LoginScreenSb */ = {
 			isa = PBXGroup;
 			children = (
+				27EF4DB424B14FF600861493 /* models */,
 				27DA60B024A2683B0077AF6C /* ViewControllers */,
 				27DA609624A25E780077AF6C /* AppDelegate.swift */,
 				27DA609824A25E780077AF6C /* SceneDelegate.swift */,
@@ -82,6 +85,14 @@
 				27DA60AC24A2606E0077AF6C /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		27EF4DB424B14FF600861493 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				27EF4DB524B1508D00861493 /* Credencial.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 				27DA609924A25E780077AF6C /* SceneDelegate.swift in Sources */,
 				27DA60AD24A2606E0077AF6C /* LoginViewController.swift in Sources */,
 				27DA60AB24A260590077AF6C /* CadastroViewController.swift in Sources */,
+				27EF4DB624B1508D00861493 /* Credencial.swift in Sources */,
 				27DA60AF24A267050077AF6C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
