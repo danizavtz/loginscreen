@@ -132,7 +132,7 @@
             </objects>
             <point key="canvasLocation" x="1886" y="549"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Vagas-->
         <scene sceneID="US1-Qm-1Iz">
             <objects>
                 <viewController storyboardIdentifier="home" id="hwa-TP-hrZ" customClass="HomeViewController" customModule="LoginScreenSb" customModuleProvider="target" sceneMemberID="viewController">
@@ -154,10 +154,54 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="adC-Ft-j8c"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Vagas" id="OBX-Ex-qUa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kM9-JA-LCB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2622" y="257"/>
+            <point key="canvasLocation" x="2610" y="1631"/>
+        </scene>
+        <!--Configurações-->
+        <scene sceneID="WnK-YR-gWw">
+            <objects>
+                <viewController id="i32-YY-Sjj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AvP-wj-qBi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Configurações" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rke-Ae-cjq">
+                                <rect key="frame" x="151" y="438" width="112" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="TC0-iE-C7N"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Configurações" id="PJH-Os-yyU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kpV-k5-zWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3309" y="1631"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jo9-Jv-Pdq">
+            <objects>
+                <tabBarController storyboardIdentifier="tabbar" id="TZ8-GE-33j" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HgF-2e-w6z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="hwa-TP-hrZ" kind="relationship" relationship="viewControllers" id="87a-pj-y0m"/>
+                        <segue destination="i32-YY-Sjj" kind="relationship" relationship="viewControllers" id="Yvu-jW-Qq1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQ5-nl-tTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3532" y="903"/>
         </scene>
         <!--Cadastro View Controller-->
         <scene sceneID="ESv-Uy-DnW">

@@ -98,8 +98,8 @@ class LoginViewController: UIViewController {
     }
     
     func acaoMudarDeTela() {
-        let homeViewController = self.storyboard?.instantiateViewController(identifier: "home") as? HomeViewController
-        self.view.window?.rootViewController = homeViewController
+        let tabViewController = self.storyboard?.instantiateViewController(identifier: "tabbar")
+        self.view.window?.rootViewController = tabViewController
         self.view.window?.makeKeyAndVisible()
     }
     
