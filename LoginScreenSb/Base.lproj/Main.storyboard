@@ -84,6 +84,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jas-pr-XB6">
                                         <rect key="frame" x="0.0" y="142.5" width="334" height="30"/>
                                         <state key="normal" title="Logar"/>
+                                        <connections>
+                                            <action selector="logginTapped:" destination="Kl7-ze-uGi" eventType="touchUpInside" id="Tvo-kv-xiq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roJ-PC-Kw0">
                                         <rect key="frame" x="0.0" y="190.5" width="334" height="30"/>
@@ -130,7 +133,7 @@
         <scene sceneID="US1-Qm-1Iz">
             <objects>
                 <viewController id="hwa-TP-hrZ" customClass="HomeViewController" customModule="LoginScreenSb" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="n96-pj-vjj">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="home" id="n96-pj-vjj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

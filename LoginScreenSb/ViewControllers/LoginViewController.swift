@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var buttonlogar: UIButton!
     @IBOutlet weak var buttoncancelar: UIButton!
     @IBOutlet weak var lblerror: UILabel!
+    let loginUrl:String =  "https://api.danizavtz.com.br/login"
     override func viewDidLoad() {
         super.viewDidLoad()
         iniciarElementos()
@@ -41,7 +42,37 @@ class LoginViewController: UIViewController {
         if error != nil {
             lblerror.text = error!
         } else {
-            
+            let url = URL(string: loginUrl)!
+            let dadosAcesso: Credencial = Credencial(login: textinputlogin.text!, senha: textinputsenha.text!)
+            guard let encodedAccessData = try? JSONEncoder().encode(dadosAcesso) else {
+                return
+            }
+            var request = URLRequest(url: url)
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.httpMethod = "POST"
+            request.httpBody = encodedAccessData
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    print ("error: \(error)")
+                    return
+                }
+                guard let response = response as? HTTPURLResponse,
+                    (200...299).contains(response.statusCode) else {
+                    print ("server error")
+                    return
+                }
+                if let mimeType = response.mimeType,
+                    mimeType == "application/json",
+                    let data = data {
+                      do {
+                        let token = try JSONDecoder().decode(AuthenticationToken.self, from: data)
+                        print ("\(token)")
+                    } catch {
+                        print("Unexpected error: \(error).")
+                    }
+                }
+            }
+            task.resume()
         }
     }
     

@@ -17,6 +17,8 @@
 		27DA60AD24A2606E0077AF6C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA60AC24A2606E0077AF6C /* LoginViewController.swift */; };
 		27DA60AF24A267050077AF6C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA60AE24A267050077AF6C /* HomeViewController.swift */; };
 		27EF4DB624B1508D00861493 /* Credencial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EF4DB524B1508D00861493 /* Credencial.swift */; };
+		27EF4DB824B1761D00861493 /* ApiErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EF4DB724B1761D00861493 /* ApiErrorHandler.swift */; };
+		27EF4DBA24B18AC700861493 /* AuthenticationTokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EF4DB924B18AC700861493 /* AuthenticationTokenData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		27DA60AC24A2606E0077AF6C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		27DA60AE24A267050077AF6C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		27EF4DB524B1508D00861493 /* Credencial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credencial.swift; sourceTree = "<group>"; };
+		27EF4DB724B1761D00861493 /* ApiErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrorHandler.swift; sourceTree = "<group>"; };
+		27EF4DB924B18AC700861493 /* AuthenticationTokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTokenData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				27EF4DB524B1508D00861493 /* Credencial.swift */,
+				27EF4DB924B18AC700861493 /* AuthenticationTokenData.swift */,
+				27EF4DB724B1761D00861493 /* ApiErrorHandler.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -168,6 +174,8 @@
 			files = (
 				27DA609B24A25E780077AF6C /* ViewController.swift in Sources */,
 				27DA609724A25E780077AF6C /* AppDelegate.swift in Sources */,
+				27EF4DB824B1761D00861493 /* ApiErrorHandler.swift in Sources */,
+				27EF4DBA24B18AC700861493 /* AuthenticationTokenData.swift in Sources */,
 				27DA609924A25E780077AF6C /* SceneDelegate.swift in Sources */,
 				27DA60AD24A2606E0077AF6C /* LoginViewController.swift in Sources */,
 				27DA60AB24A260590077AF6C /* CadastroViewController.swift in Sources */,
