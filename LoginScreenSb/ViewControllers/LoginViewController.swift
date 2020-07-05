@@ -66,6 +66,8 @@ class LoginViewController: UIViewController {
                     let data = data {
                       do {
                         let token = try JSONDecoder().decode(AuthenticationToken.self, from: data)
+                        let defaults = UserDefaults.standard
+                        defaults.set(token, forKey: "token")
                         print ("\(token)")
                     } catch {
                         print("Unexpected error: \(error).")
@@ -73,6 +75,7 @@ class LoginViewController: UIViewController {
                 }
             }
             task.resume()
+            acaoMudarDeTela()
         }
     }
     
@@ -81,14 +84,11 @@ class LoginViewController: UIViewController {
         self.view.window?.rootViewController = inicioViewController
         self.view.window?.makeKeyAndVisible()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func acaoMudarDeTela() {
+        let homeViewController = self.storyboard?.instantiateViewController(identifier: "home") as? HomeViewController
+        self.view.window?.rootViewController = homeViewController
+        self.view.window?.makeKeyAndVisible()
     }
-    */
 
 }
