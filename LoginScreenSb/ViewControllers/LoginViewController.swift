@@ -19,7 +19,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         iniciarElementos()
-        // Do any additional setup after loading the view.
     }
     
     func iniciarElementos(){
@@ -61,7 +60,7 @@ class LoginViewController: UIViewController {
                 }
                 guard let response = response as? HTTPURLResponse,
                     (200...299).contains(response.statusCode) else {
-                    print ("server error")
+                    print ("Usuário ou senha incorretos")
                     return
                 }
                 if let mimeType = response.mimeType,
