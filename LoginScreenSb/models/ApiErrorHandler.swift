@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct ApiErrorHandler : Codable {
+    let location : String
+    let msg : String
+    let param: String
+}
