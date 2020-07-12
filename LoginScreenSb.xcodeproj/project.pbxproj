@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27432B2F24BB16D100572307 /* Cadastro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27432B2E24BB16D100572307 /* Cadastro.swift */; };
+		27432B3124BB5A3300572307 /* SuccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27432B3024BB5A3300572307 /* SuccessController.swift */; };
 		27DA609724A25E780077AF6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA609624A25E780077AF6C /* AppDelegate.swift */; };
 		27DA609924A25E780077AF6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA609824A25E780077AF6C /* SceneDelegate.swift */; };
 		27DA609B24A25E780077AF6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA609A24A25E780077AF6C /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		27432B2E24BB16D100572307 /* Cadastro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cadastro.swift; sourceTree = "<group>"; };
+		27432B3024BB5A3300572307 /* SuccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessController.swift; sourceTree = "<group>"; };
 		27DA609324A25E780077AF6C /* LoginScreenSb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginScreenSb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DA609624A25E780077AF6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27DA609824A25E780077AF6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				27DA60AC24A2606E0077AF6C /* LoginViewController.swift */,
 				27F09C4424B252C80099139B /* SpinnerViewController.swift */,
 				27F09C4824B292810099139B /* ConfiguracaoViewController.swift */,
+				27432B3024BB5A3300572307 /* SuccessController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				27DA60AD24A2606E0077AF6C /* LoginViewController.swift in Sources */,
 				27DA60AB24A260590077AF6C /* CadastroViewController.swift in Sources */,
 				27EF4DB624B1508D00861493 /* Credencial.swift in Sources */,
+				27432B3124BB5A3300572307 /* SuccessController.swift in Sources */,
 				27F09C4924B292810099139B /* ConfiguracaoViewController.swift in Sources */,
 				27DA60AF24A267050077AF6C /* HomeViewController.swift in Sources */,
 			);

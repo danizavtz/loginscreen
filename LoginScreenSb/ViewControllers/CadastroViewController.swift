@@ -85,8 +85,8 @@ class CadastroViewController: UIViewController {
     }
     
     func chamarTelaLogin() {
-        let loginViewController = self.storyboard?.instantiateViewController(identifier: "loginScreen") as? LoginViewController
-        self.view.window?.rootViewController = loginViewController
+        let sucessoViewController = self.storyboard?.instantiateViewController(identifier: "sucessoCadastro") as? SuccessViewController
+        self.view.window?.rootViewController = sucessoViewController
         self.view.window?.makeKeyAndVisible()
     }
     
