@@ -49,9 +49,7 @@ class CadastroViewController: UIViewController {
             return
         }
         let url = URL(string: cadastrarUrl)!
-        let dadosCadastro: Cadastro = Cadastro(username: inputUsuario.text!,
-                                               senha: inputSenha.text!,
-                                               email: inputEmail.text!)
+        let dadosCadastro: Cadastro = Cadastro(username: inputUsuario.text!, senha: inputSenha.text!, email: inputEmail.text!)
         guard let encodedCadastroData = try? JSONEncoder().encode(dadosCadastro) else {
             return
         }
