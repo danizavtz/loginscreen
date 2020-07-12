@@ -32,11 +32,14 @@ class CadastroViewController: UIViewController {
     }
     
     func validateFields() -> String? {
-        if (inputEmail.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        if inputEmail.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             inputUsuario.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             inputSenha.text?.trimmingCharacters(in: .newlines) == "" ||
-            inputConfirmar.text?.trimmingCharacters(in: .newlines) == "") {
+            inputConfirmar.text?.trimmingCharacters(in: .newlines) == "" {
             return "Preencha todos os campos"
+        }
+        if inputSenha.text?.trimmingCharacters(in: .newlines) != inputConfirmar.text?.trimmingCharacters(in: .newlines) {
+            return "Os campos de senha e confirmar senha não conferem"
         }
         
         return nil
