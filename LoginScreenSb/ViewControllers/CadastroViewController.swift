@@ -65,11 +65,15 @@ class CadastroViewController: UIViewController {
             }
             guard let response = response as? HTTPURLResponse,
                 (200...299).contains(response.statusCode) else {
-                    self.lblError.text = "Houve um erro ao efetuar cadastro"
+                    DispatchQueue.main.async {
+                        self.lblError.text = "Usuário ou senha incorretos"
+                    }
                     self.removerSpinnerView()
                     return
             }
-            self.chamarTelaLogin()
+            DispatchQueue.main.async {
+                self.chamarTelaLogin()
+            }
         }
         task.resume()
     }
